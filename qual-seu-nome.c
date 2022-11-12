@@ -14,7 +14,11 @@ int main() {
 	int I_idade;
 	// the mensage reads... "Hello, what's your name and what's your age?"
 	printf("Olá, qual é o seu nome e quantos anos você tem?\n");
+<<<<<<< HEAD
 	scanf("%s",&nome);
+=======
+	scanf("%s, %d",&nome);
+>>>>>>> 17cf4696724a2539e8bafdd3366c7813807e086e
 	scanf("%s",&C_idade);
 
 	I_idade = atoi(&C_idade);
