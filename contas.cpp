@@ -20,15 +20,18 @@ int main() {
 	std::cout << "Insira dois numeros.\n";
 	std::cin >> num1 >> num2;
 	
-	std::cout << "Você gostaria de efetuar uma [A]dição, [S]ubtração ou uma [M]ultiplicação?\n";
+	std::cout << "Você gostaria de efetuar uma [A]dição, [S]ubtração ou uma [M]ultiplicação, com estes numeros?\n";
 	std::cin >> escolha;
 
-	if(escolha == 'A' || escolha == 'S' || escolha == 'M') {
-		std::cout << "Deu certo\n";
+	if(escolha == 'A') {
+		std::cout << num1 << " + " << num2 << " = " << adição(num1,num2) << std::endl;
+	} else if(escolha == 'S') {
+		std::cout << num1 << " - " << num2 << " = " << subtração(num1,num2) << std::endl;
+	}
+	
+	if(escolha == 'M') {
+		std::cout << num1 << " X " << num2 << " = " << multipl(num1, num2) << std::endl;
 	}
 
-	//std::cout << num1 << " + " << num2 << " = " << adição(num1,num2) << std::endl;
-	//std::cout << num1 << " - " << num2 << " = " << subtração(num1,num2) << std::endl;
-	
 	return 0;
 }
