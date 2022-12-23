@@ -21,17 +21,6 @@ float divisão(float numero1, float numero2) {
 	}
 }
 
-/*
-	objetivo: transformar a função
-*/
-
-/*char tipoOperação(char resutado) {
-	char operação;
-	std::cout << "me dia Qual será a operação\n".
-	cin >> operação;
-	
-	return operação;
-}*/
 
 int main() {
 	int num1;
@@ -44,6 +33,7 @@ int main() {
 	std::cout << "Você gostaria de efetuar uma [A]dição, [S]ubtração, [M]ultiplicação ou uma [D]ivisão, com estes numeros?\n";
 	std::cin >> escolha;
 
+	//eu gosto de parear as operações
 	if(escolha == 'A') {
 		std::cout << num1 << " + " << num2 << " = " << adição(num1,num2) << std::endl;
 	} else if(escolha == 'S') {
