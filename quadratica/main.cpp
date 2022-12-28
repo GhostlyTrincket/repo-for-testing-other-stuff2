@@ -4,6 +4,18 @@
 //esse arquivo serve só pro usuario inserir os dados
 int pegarNum();
 
+int verificarA(int a) {
+	if(a == 0) {
+		std::cout << "Impossível calcular, sendo A = 0!\n";
+	} else {
+		return a;
+	}
+
+	return 0;
+}
+
+
+
 int acharDelta(int a, int b, int c); 
 
 int calcularBashk(int a, int b, int delta);

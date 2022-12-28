@@ -1,10 +1,19 @@
 #include <iostream>
 #include <cmath>
+#include "verificador.h"
 
 //esse arquivo vai ser a parte mais bruta
 
-//foward function do header-- nem era para isso daqui estar aqui
-int	verificarDelta(int delta);
+int verificarDelta(int delta) {
+	if(delta < 0) {
+		std::cout << "Delta negativo. Conta invalida!\n";
+		return 1;
+	} else if(delta > 0) {
+		return delta;
+	}
+
+	return 0;
+}
 
 int pegarNum() {
 	int numero;
