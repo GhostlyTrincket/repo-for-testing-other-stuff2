@@ -3,9 +3,9 @@
 #ifndef VERIFICADOR_H
 #define VERIFICADOR_H
 
-int verificarA(int a);
+int verifyA(int a);
 
-int verificarDelta(int delta);
+int verifyDeltaVal(int delta);
 //eu sinto que... eu vou precisar de mais alguma função aqui...
 
 #endif

@@ -2,22 +2,14 @@
 #include "verificador.h"
 
 //esse arquivo serve só pro usuario inserir os dados
-int pegarNum();
 
-int verificarA(int a) {
-	if(a == 0) {
-		std::cout << "Impossível calcular, sendo A = 0!\n";
-		return 1;
-	} else {
-		return a;
-	}
+int getUserNum();
 
-	return 0;
-}
+int verifyA(int a);
 
-int acharDelta(int a, int b, int c); 
+int findDeltaVal(int a, int b, int c);
 
-void calcularBashk(int a, int b, int delta);
+void calcBashk(int a, int b, int delta);
 
 int main() {
 	int a; //a é quem está multiplicando x².
@@ -25,15 +17,15 @@ int main() {
 	int c; //c é o termo solto.
 
 	std::cout << "Me de um valor para A, B e C:\n";
-	a = pegarNum();
-	b = pegarNum();
-	c = pegarNum();
+	a = getUserNum();
+	b = getUserNum();
+	c = getUserNum();
 
-	verificarA(a);
+	verifyA(a);
 	
-	int delta = acharDelta(a,b,c);
+	int delta = findDeltaVal(a,b,c);
 
-	calcularBashk(a,b,delta);
+	calcBashk(a,b,delta);
 
 	return 0;
 }
