@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "verificador.h"
+#include "calculo.h"
 
 //esse arquivo vai ser a parte mais bruta
 
