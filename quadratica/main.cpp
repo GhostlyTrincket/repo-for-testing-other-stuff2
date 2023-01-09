@@ -1,15 +1,9 @@
 #include <iostream>
-#include "verificador.h"
+#include "calculo.h"
 
 //esse arquivo serve só pro usuario inserir os dados
 
 int getUserNum();
-
-int verifyA(int a);
-
-int findDeltaVal(int a, int b, int c);
-
-void calcBashk(int a, int b, int delta);
 
 int main() {
 	int a; //a é quem está multiplicando x².
