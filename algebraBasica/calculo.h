@@ -1,5 +1,5 @@
-#ifndef VERIFICADOR_H
-#define VERIFICADOR_H
+#ifndef CALCULO_H
+#define CALCULO_H
 
 int getUserNum();
 
