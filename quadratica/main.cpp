@@ -3,8 +3,6 @@
 
 //esse arquivo serve só pro usuario inserir os dados
 
-int getUserNum();
-
 int main() {
 	int a; //a é quem está multiplicando x².
 	int b; //b é quem multiplica x.
