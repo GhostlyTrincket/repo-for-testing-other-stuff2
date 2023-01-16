@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include "converter.h"
 
 int main() {
 	std::string name;
@@ -11,8 +11,9 @@ int main() {
 	std::cin >> age;
 	
 	int Int_Name = stringToInt(name);
-
-	std::cout << "The name and age provided has a length that is equals to " << sumNameAge(Int_Name, age) << "!" << std::endl;
+	int sum = sumNameAge(Int_Name, age);
+	
+	printResult(sum);
 
 	return 0;
 }
