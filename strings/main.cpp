@@ -1,10 +1,6 @@
 #include <iostream>
 #include <string>
 
-int sumNameAge(int name, int age);
-
-int stringToInt(std::string stringGiven);
-
 int main() {
 	std::string name;
 	int age;
