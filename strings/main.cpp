@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 
-int sumNameAge(int name, int age) {
-	return name + age;
-}
+int sumNameAge(int name, int age);
+
+int stringToInt(std::string stringGiven);
 
 int main() {
 	std::string name;
@@ -14,7 +14,7 @@ int main() {
 	std::getline(std::cin >> std::ws, name);
 	std::cin >> age;
 	
-	int Int_Name = static_cast<int>(name.length());
+	int Int_Name = stringToInt(name);
 
 	std::cout << "The name and age provided has a length that is equals to " << sumNameAge(Int_Name, age) << "!" << std::endl;
 
