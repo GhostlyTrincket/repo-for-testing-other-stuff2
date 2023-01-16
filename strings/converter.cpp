@@ -1,9 +1,14 @@
+#include <iostream>
 #include <string>
 
-int sumNameAge(int name, int age) {
-	return name + age;
+int stringToInt(std::string strinGiven) {
+	return static_cast<int>(strinGiven.length());
 }
 
-int stringToInt(std::string stringGiven) {
-	return static_cast<int>(stringGiven.length());
+int sumNameAge(int nameLength, int age) {
+	return nameLength + age;
+}
+
+void printResult(int sum) {
+	std::cout << "The name and age provided has the length " << sum << "!" << std::endl;
 }
