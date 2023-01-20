@@ -1,7 +1,7 @@
 #include <iostream>
-#include <string>
+#include <string_view>
 
-int stringToInt(std::string strinGiven) {
+int stringToInt(std::string_view strinGiven) {
 	return static_cast<int>(strinGiven.length());
 }
 

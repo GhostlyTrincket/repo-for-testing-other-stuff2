@@ -1,12 +1,11 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef CONVERTER_H
+#define CONVERTER_H
 
-#include <string>
+#include <string_view>
 
 int sumNameAge(int name, int age);
 
-//int stringToInt(std::string stringGiven);
-int stringToInt(std::string strinGiven);
+int stringToInt(std::string_view strinGiven);
 
 void printResult(int sum);
 

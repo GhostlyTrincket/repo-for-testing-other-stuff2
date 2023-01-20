@@ -5,9 +5,10 @@ int main() {
 	std::string name;
 	int age;
 
-	std::cout << "Insert a name and age here, so that I can sum both.\n";
-
+	std::cout << "Insert a name here.\n";
 	std::getline(std::cin >> std::ws, name);
+
+	std::cout << "And a age here, so that I can sum the age and the length of the name.\n";
 	std::cin >> age;
 	
 	int Int_Name = stringToInt(name);
