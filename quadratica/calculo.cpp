@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include "calculo.h"
 
 //esse arquivo vai ser a parte mais bruta
 
@@ -15,7 +14,7 @@ int getUserNum() {
 int verifyA(int a) {
 	if(a == 0) {
 		std::cout << "Impossível calcular, sendo A = 0!\n";
-		return -1;
+		return 1;
 	} else {
 		return a;
 	}
@@ -24,7 +23,7 @@ int verifyA(int a) {
 int verifyDeltaVal(int delta) {
 	if(delta < 0) {
 		std::cout << "Delta negativo. Conta invalida!\n";
-		return -1;
+		return 1;
 	} else {
 		return delta;
 	}
