@@ -1,16 +1,16 @@
 #ifndef CALCULAR_H
 #define CALCULAR_H
 
-double obterNumero();
+double getNumber();
 
-char escolherOpera();
+char chooseOp();
 
-double multiplicar(double numero1, double multiplic);
+double multiply(double number1, double multiplyer);
 
-double somar(double numero1, double numero2);
+double add(double number1, double number2);
 
-double subtrair(double numero1, double numero2);
+double subtract(double number1, double number2);
 
-double dividir(double numero1, double numero2);
+double divide(double number1, double number2);
 
 #endif

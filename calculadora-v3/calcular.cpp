@@ -1,39 +1,39 @@
 #include <iostream>
 
-double obterNumero() {
-	double numero;
+double getNumber() {
+	double number;
 	
-	std::cin >> numero;
+	std::cin >> number;
 
-	return numero;
+	return number;
 }
 
-char escolherOpera() {
-	char operação;
-
-	std::cout << "Você gostaria de efetuar uma [A]dição, [S]ubtração, [M]ultiplicação ou uma [D]ivisão, com estes numeros?\n";
-	std::cin >> operação;
-	
-	return operação;
+double multiply(double number1, double multiplic) {
+	return number1 * multiplic;
 }
 
-double multiplicar(double numero1, double multiplic) {
-	return numero1 * multiplic;
+double add(double number1, double number2) {
+	return number1 + number2;
 }
 
-double somar(double numero1, double numero2) {
-	return numero1 + numero2;
+double subtract(double number1, double number2) {
+	return number1 - number2;
 }
 
-double subtrair(double numero1, double numero2) {
-	return numero1 - numero2;
-}
-
-double dividir(double numero1, double numero2) {
-	if(numero1 == 0 || numero2 == 0) {
+double divide(double number1, double number2) {
+	if(number1 == 0 || number2 == 0) {
 		std::cout << "ERRO.\nCODIGO DE SAÍDA:";
 		return 1;
 	} else {
-		return numero2 / numero1;
+		return number2 / number1;
 	}
+}
+
+char chooseOp() {
+	char operation;
+
+	std::cout << "Would you like to [A]dd, [S]ubtract, [M]ultiply or [D]ivide, with the given numbers?\n";
+	std::cin >> operation;
+	
+	return operation;
 }

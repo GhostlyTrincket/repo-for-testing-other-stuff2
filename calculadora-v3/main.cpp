@@ -2,27 +2,26 @@
 #include "calcular.h"
 
 int main() {
-	double numero1;
-	double numero2;
-	char operação;
+	double number1;
+	double number2;
+	char operation;
 
-	std::cout << "Por favor, insira dois números aqui:\n";
-	numero1 = obterNumero();
-	numero2 = obterNumero();
+	std::cout << "Please, insert two numbers here:\n";
+	number1 = getNumber();
+	number2 = getNumber();
 
-	operação = escolherOpera();
+	operation = chooseOp();
 	
-	if(operação == 'A') {
-		std::cout << numero1 << " + " << numero2 << " = " << somar(numero1,numero2) << std::endl;
-	} else if(operação == 'S') {
-		std::cout << numero1 << " - " << numero2 << " = " << subtrair(numero1,numero2) << std::endl;
+	if(operation == 'A') {
+		std::cout << number1 << '+' << number2 << '=' << add(number1,number2) << std::endl;
+	} else if(operation == 'S') {
+		std::cout << number1 <<  '-' << number2 << '=' << subtract(number1,number2) << std::endl;
 	}
 
-	if(operação == 'M') {
-		std::cout << numero1 << " X " << numero2 << " = " << multiplicar(numero1,numero2) << std::endl;
-	} else if(operação == 'D') {
-		std::cout << numero1 << " / " << numero2 << " = " << dividir(numero1,numero2) << std::endl;
+	if(operation == 'M') {
+		std::cout << number1 << 'X' << number2 << '=' << multiply(number1,number2) << std::endl;
+	} else if(operation == 'D') {
+		std::cout << number1 << '/' << number2 << '=' << divide(number1,number2) << std::endl;
 	}
-
 	return 0;
 }
