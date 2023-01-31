@@ -9,7 +9,7 @@
 // 0x10 = 0001 0000
 
 int main() {
-//flag para pesquisas binarias.
+//flag servem para pesquisas binarias.
 //os 0s representam bits que não queremos e 1s para os quais que queremos.
 	[[maybe_unused]] constexpr std::uint8_t opçãoVista = 0x01;
 	[[maybe_unused]] constexpr std::uint8_t opçãoEditada = 0x02;
@@ -20,7 +20,7 @@ int main() {
 
 	std::cout << std::bitset<8>{flag} << std::endl;
 
-//para se favoritar um algo é necessario vê-lo.
+//para se favoritar um artigo é necessario vê-lo, então...
 //é redundante eu deixar desse jeito, já que a flag **já tem** o valor da variavel 'opçãoFavo', mas... eu quero deixar deste jeito. 
 	flag |= (opçãoFavo | opçãoVista);
 
