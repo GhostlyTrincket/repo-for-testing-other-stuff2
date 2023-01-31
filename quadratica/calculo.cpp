@@ -14,7 +14,7 @@ int getUserNum() {
 int verifyA(int a) {
 	if(a == 0) {
 		std::cout << "Impossível calcular, sendo A = 0!\n";
-		return 1;
+		return -1;
 	} else {
 		return a;
 	}
@@ -23,7 +23,7 @@ int verifyA(int a) {
 int verifyDeltaVal(int delta) {
 	if(delta < 0) {
 		std::cout << "Delta negativo. Conta invalida!\n";
-		return 1;
+		return -1;
 	} else {
 		return delta;
 	}
@@ -39,8 +39,8 @@ int findDeltaVal(int a, int b, int c) {
 }
 
 void calcBashk(int a, int b, int delta) {
-	int X1 = ((b * (-1)) + sqrt(delta)) / (2 * a);
-	int X2 = ((b * (-1)) - sqrt(delta)) / (2 * a);
+	int X1 = (-b + sqrt(delta)) / (2 * a);
+	int X2 = (-b - sqrt(delta)) / (2 * a);
 	
 	std::cout << "A primeira raiz é " << X1 << std::endl;
 	std::cout << "A segunda raiz é " << X2 << std::endl;
