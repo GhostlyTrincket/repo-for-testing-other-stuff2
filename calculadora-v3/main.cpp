@@ -10,18 +10,9 @@ int main() {
 	number1 = getNumber();
 	number2 = getNumber();
 
+	std::cout << "Would you like to [A]dd, [S]ubtract, [M]ultiply or [D]ivide?\n";
 	operation = chooseOp();
 	
-	if(operation == 'A') {
-		std::cout << number1 << '+' << number2 << '=' << add(number1,number2) << std::endl;
-	} else if(operation == 'S') {
-		std::cout << number1 <<  '-' << number2 << '=' << subtract(number1,number2) << std::endl;
-	}
-
-	if(operation == 'M') {
-		std::cout << number1 << 'X' << number2 << '=' << multiply(number1,number2) << std::endl;
-	} else if(operation == 'D') {
-		std::cout << number1 << '/' << number2 << '=' << divide(number1,number2) << std::endl;
-	}
+	showResult(number1,number2,operation);
 	return 0;
 }

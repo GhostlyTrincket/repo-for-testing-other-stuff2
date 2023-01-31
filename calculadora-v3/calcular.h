@@ -1,16 +1,18 @@
 #ifndef CALCULAR_H
 #define CALCULAR_H
 
-double getNumber();
+double getnum();
 
 char chooseOp();
 
-double multiply(double number1, double multiplyer);
+double multiply(double num1, double multipler);
 
-double add(double number1, double number2);
+double add(double num1, double num2);
 
-double subtract(double number1, double number2);
+double subtract(double num1, double num2);
 
-double divide(double number1, double number2);
+double divide(double num1, double num2);
+
+void showResult(int num1, int num2, char OP);
 
 #endif

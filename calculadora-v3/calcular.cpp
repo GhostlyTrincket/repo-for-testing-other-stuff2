@@ -1,39 +1,53 @@
 #include <iostream>
 
-double getNumber() {
-	double number;
+double getnum() {
+	double num;
 	
-	std::cin >> number;
+	std::cin >> num;
 
-	return number;
+	return num;
 }
 
-double multiply(double number1, double multiplic) {
-	return number1 * multiplic;
+double multiply(double num1, double multiplier) {
+	return num1 * multiplier;
 }
 
-double add(double number1, double number2) {
-	return number1 + number2;
+double add(double num1, double num2) {
+	return num1 + num2;
 }
 
-double subtract(double number1, double number2) {
-	return number1 - number2;
+double subtract(double num1, double num2) {
+	return num1 - num2;
 }
 
-double divide(double number1, double number2) {
-	if(number1 == 0 || number2 == 0) {
-		std::cout << "ERRO.\nCODIGO DE SAÍDA:";
+double divide(double num1, double num2) {
+	if(num1 == 0 || num2 == 0) {
+		std::cout << "ERROR.\nERROR CODE:";
 		return 1;
 	} else {
-		return number2 / number1;
+		return num1 / num2;
 	}
 }
 
 char chooseOp() {
 	char operation;
 
-	std::cout << "Would you like to [A]dd, [S]ubtract, [M]ultiply or [D]ivide, with the given numbers?\n";
 	std::cin >> operation;
 	
 	return operation;
 }
+
+void showResult(int num1, int num2, char OP) {
+	if(OP == 'A') {
+		std::cout << num1 << '+' << num2 << '=' << add(num1,num2) << std::endl;
+	} else if(OP == 'S') {
+		std::cout << num1 << '-' << num2 << '=' << subtract(num1,num2) << std::endl;
+	}
+
+	if(OP == 'M') {
+		std::cout << num1 << 'x' << num2 << '=' << multiply(num1,num2) << std::endl;
+	} else if(OP == 'D') {
+		std::cout << num1 << '/' << num2 << '=' << divide(num1,num2) << std::endl;
+	}
+}
+
