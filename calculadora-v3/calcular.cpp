@@ -1,6 +1,6 @@
 #include <iostream>
 
-double getnum() {
+double getNum() {
 	double num;
 	
 	std::cin >> num;
