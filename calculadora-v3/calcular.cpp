@@ -1,13 +1,5 @@
 #include <iostream>
 
-double getNum() {
-	double num;
-	
-	std::cin >> num;
-
-	return num;
-}
-
 double multiply(double num1, double multiplier) {
 	return num1 * multiplier;
 }
@@ -29,15 +21,23 @@ double divide(double num1, double num2) {
 	}
 }
 
+double getNum() {
+	double num;
+
+	std::cin >> num;
+
+	return num;
+}
+
 char chooseOp() {
 	char operation;
 
 	std::cin >> operation;
-	
+
 	return operation;
 }
 
-void showResult(int num1, int num2, char OP) {
+void showResult(double num1, double num2, char OP) {
 	if(OP == 'A') {
 		std::cout << num1 << '+' << num2 << '=' << add(num1,num2) << std::endl;
 	} else if(OP == 'S') {

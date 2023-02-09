@@ -7,8 +7,8 @@ int main() {
 	char operation;
 
 	std::cout << "Please, insert two numbers here:\n";
-	number1 = getNumber();
-	number2 = getNumber();
+	number1 = getNum();
+	number2 = getNum();
 
 	std::cout << "Would you like to [A]dd, [S]ubtract, [M]ultiply or [D]ivide?\n";
 	operation = chooseOp();
