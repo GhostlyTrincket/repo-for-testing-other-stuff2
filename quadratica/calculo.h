@@ -3,12 +3,14 @@
 
 int getUserNum();
 
-int verifyA(int a);
+int verifyA(int);
 
-int findDeltaVal(int a, int b, int c);
+int calcDelta(int,int,int);
 
-int verifyDeltaVal(int delta);
+int verifyDeltaVal(int);
 
-void calcBashk(int a, int b, int delta);
+int calcBashk(int,int,int);
+
+void mostrResult(int,int);
 
 #endif
