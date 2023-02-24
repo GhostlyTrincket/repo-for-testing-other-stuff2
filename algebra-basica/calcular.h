@@ -6,4 +6,5 @@ int getUserNum();
 int calculate(int a, int b);
 
 int invertSign(int number);
+
 #endif
