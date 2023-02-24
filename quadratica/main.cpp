@@ -12,6 +12,7 @@ int main() {
 
 	int delta = calcDelta(a,b,c);
 
+	verifyDelta(delta);
 	calcBashk(a,b,delta);
 	return 0;
 }

@@ -28,11 +28,7 @@ int verifyDelta(int delta) {
 }
 
 int calcDelta(int a, int b, int c) {
-	int delta = pow(b,2) - 4 * (a * c);
-
-	verifyDelta(delta);
-
-	return delta; 
+	return pow(b,2) - 4 * (a * c);
 }
 
 void printResult(int firstRoot, int secondRoot) {
