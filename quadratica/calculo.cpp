@@ -1,9 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-//esse arquivo vai ser a parte mais bruta
-
-int getUserNum() {
+int getNumber() {
 	int number;
 
 	std::cin >> number;
@@ -13,41 +11,40 @@ int getUserNum() {
 
 int verifyA(int a) {
 	if(a == 0) {
-		std::cout << "Impossível calcular, sendo A = 0!\n";
-		return 1;
-	} else {
-		return a;
-	}
+		std::cout << "Impossible to calculate if the value of 'a' is equal to zero.\n";
+		exit(1);
+	} 
+
+	return 0;
 }
 
-int verifyDeltaVal(int delta) {
+int verifyDelta(int delta) {
 	if(delta < 0) {
-		std::cout << "Numero imaginario detectado, parando a conta!\n";
-		return 1;
-	} else {
-		return delta;
+		std::cout << "Imaginary number detected, stopping calculus!\n";
+		exit(1);
 	}
-	return 0;
+
+	return delta;
 }
 
 int calcDelta(int a, int b, int c) {
 	int delta = pow(b,2) - 4 * (a * c);
-	
-	verifyDeltaVal(delta);
-	
+
+	verifyDelta(delta);
+
 	return delta; 
 }
 
-void mostrResult(int primeiroVal, int segundVal) {
-	std::cout << "O primeiro valor: " << primeiroVal << '\n';
-	std::cout << "O segundo valor: " << segundVal << '\n';
+void printResult(int firstRoot, int secondRoot) {
+	std::cout << "First root: " << firstRoot << '\n';
+	std::cout << "Second root: " << secondRoot << '\n';
 }
 
 int calcBashk(int a, int b, int delta) {
 	int x1 = (-b + sqrt(delta)) / (2 * a);
 	int x2 = (-b - sqrt(delta)) / (2 * a);
 	
-	mostrResult(x1,x2);
+	printResult(x1,x2);
 
 	return 0;
 }
