@@ -3,11 +3,11 @@
 
 int getNumber();
 
-int verifyA(int);
+void verifyA(int);
 
 int calcDelta(int,int,int);
 
-int verifyDelta(int);
+void verifyDelta(int);
 
 int calcBashk(int,int,int);
 
