@@ -1,3 +1,7 @@
+#ignora tudo que for texto plano
+
+*.txt
+
 #ignora tudo que for binario
 
 *.out
