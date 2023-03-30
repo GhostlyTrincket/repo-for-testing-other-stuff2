@@ -1,7 +1,7 @@
 #include <iostream>
 
 int obterProvas() {
-	int provasDadas = 0.0;
+	int provasDadas = 0;
 
 	std::cin >> provasDadas;
 
