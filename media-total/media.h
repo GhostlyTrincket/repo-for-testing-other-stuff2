@@ -3,4 +3,8 @@
 
 double calcMedia(double,double);
 
+double notasAnuais(int);
+
+void mostrNotas(double,double);
+
 #endif
