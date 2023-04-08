@@ -1,17 +1,9 @@
 #include <iostream>
 #include <cmath>
 
-double getNumber() {
-	double number;
-
-	std::cin >> number;
-
-	return number;
-}
-
 double calcDelta(double a, double b, double c) {
 //Delta = b² - 4 * a * c
-	return pow(b,2) - 4 * (a * c);
+	return (b * b) - 4 * (a * c);
 }
 
 void printResult(double x1, double x2) {
