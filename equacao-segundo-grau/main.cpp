@@ -1,6 +1,15 @@
 #include <iostream>
 #include "calculo.h"
-#include "verificadores.h"
+#include "checker.h"
+
+//this function will stay here for the moment
+double getNumber() {
+	double number;
+
+	std::cin >> number;
+
+	return number;
+}
 
 int main() {
 	std::cout << "Give a value to A.\n";
