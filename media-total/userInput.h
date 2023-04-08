@@ -1,10 +1,10 @@
 #ifndef USER_INPUT_H
 #define USER_INPUT_H
 
-int obterProvas();
+int getTest();
 
-char obterInput();
+char getInput();
 
-double obterNota();
+double getScore();
 
 #endif

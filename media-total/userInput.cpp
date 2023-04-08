@@ -1,6 +1,6 @@
 #include <iostream>
 
-int obterProvas() {
+int getTest() {
 	int provasDadas = 0;
 
 	std::cin >> provasDadas;
@@ -8,15 +8,15 @@ int obterProvas() {
 	return provasDadas;
 }
 
-double obterNota() {
-	double nota = 0.0;
+double getScore() {
+	double score = 0.0;
 
-	std::cin >> nota;
+	std::cin >> score;
 
-	return nota;
+	return score;
 }
 
-char obterInput() {
+char getInput() {
 	char input = ' ';
 
 	std::cin >> input;

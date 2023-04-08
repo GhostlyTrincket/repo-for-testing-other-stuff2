@@ -1,10 +1,12 @@
 #ifndef MEDIA_H
 #define MEDIA_H
 
-double calcMedia(double,double);
+int init();
 
-double notasAnuais(int);
+double calcAvrg(double,double);
 
-void mostrNotas(double,double);
+double getTotalGrade(int);
+
+void showScore(double,double);
 
 #endif

@@ -2,27 +2,52 @@
 #include <iomanip>
 #include "userInput.h"
 
-double calcMedia(double notaTotal, double provasPeloAno) {
-//(valor1 + valor2 + valor3 + valorN) / N
-	return notaTotal / provasPeloAno;
+constexpr double calcAvrg(double score, double examsByYear) {
+//formula: (value1 + value2 + value3 + valueN) / N
+	return score / examsByYear;
 }
 
-double notasAnuais(int provasAno) {
-	double notaTotal = 0;
+double getTotalGrade(int testAmount) {
+	double totalScore = 0;
 
-//loop para obter as nota(s) da(s) prova(s) pelo ano
-	for(int provaAtual = 1; provaAtual <= provasAno; ++provaAtual) {
-		std::cout << "Me diga o quanto você tirou na " << provaAtual << "ª prova, por favor.\n";
-		double notaProva = obterNota();
+	for(int currTest = 1; currTest <= testAmount; ++currTest) {
+		std::cout << "Your grade in the " << currTest << "th test.\n";
+		double testScore = getScore();
 
-		notaTotal += notaProva;
+		totalScore += testScore;
 	}
 
-	return notaTotal;
+	return totalScore;
 }
 
-void mostrNotas(double notaTotal, double notaFinal) {
-	std::cout << "Somando as notas das provas, você tirou " << notaTotal << '\n';
+void showScore(double gradeSum, double averagScore) {
+	std::cout << "With the given score, your grade is: " << gradeSum << '\n';
 	std::cout << std::setprecision(2);
-	std::cout << "A sua média foi de " << notaFinal << '\n';
+	std::cout << "With a average of " << averagScore << '\n';
+}
+
+int init() {
+//i cound't reduce this function to less than 10 lines, and this version is already trimmed...
+	while(true) {
+		std::cout << "Would you say to me how many tests will happen at your school?\n";
+		int exams = getTest();
+
+		if(exams == 0) {
+			std::cout << "Error. It is impossible to have no exams in a letive year.\n";
+			return 1;
+		}
+
+		double gradeSum = getTotalGrade(exams);
+		double finalScore = calcAvrg(gradeSum,exams);
+
+		showScore(gradeSum,finalScore);
+
+		std::cout << "Would you like to exit? [y/n].\n";
+		char exitChoice = getInput();
+
+		if(exitChoice == 'y') {
+			return 0;
+		}
+	}
+	return 0;
 }
